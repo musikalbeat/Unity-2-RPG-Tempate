@@ -29,6 +29,11 @@ public class InventorySlot : MonoBehaviour
             indexItem = -1;
             amount = -1;
         }
+
+        if (infoText == null)
+        {
+            infoText = GameObject.FindWithTag("Info").GetComponent<TextMeshProUGUI>();
+        }
     }
 
     public void UpdateSelf(PlayerManager player)
